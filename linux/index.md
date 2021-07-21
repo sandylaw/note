@@ -66,9 +66,13 @@
 
 [2021-07-16-Turn_md_to_pdf_with_pandoc](./2021-07-16-Turn_md_to_pdf_with_pandoc.md)
 
+[2021-07-21-Disable_write_access_to_the_CDROM_for_unauthorized_users](./2021-07-21-Disable_write_access_to_the_CDROM_for_unauthorized_users.md)
+
 [CLIPOS](./CLIPOS.md)
 
 [Proxmox6.2手册.pdf](./Proxmox6.2手册.pdf)
+
+[the-way-to-go.pdf](./the-way-to-go.pdf)
 
 [ubuntu core 与 uos device构建方式的差异](./ubuntu core 与 uos device构建方式的差异.md)
 
