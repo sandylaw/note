@@ -198,11 +198,28 @@ user::rw-
 group::rw-
 other::---
 ```
+## udev规则调用blockdev设置光驱只读
+
+```bash
+cat << EOF | sudo tee /etc/udev/rules.d/71-cdrom-ro.rules 
+SUBSYSTEMS=="block", ACTION=="add", KERNEL=="sr*", RUN+="/sbin/blockdev --setro /dev/%k"
+SUBSYSTEM=="scsi_generic", SUBSYSTEMS=="scsi", ATTRS{type}=="4|5", ACTION=="add", KERNEL=="sr*", RUN+="/sbin/blockdev --setro /dev/%k"
+EOF
+
+sudo udevadm control --reload
+
+```
+
+
 
 ### 使用刻录机进行测试
 
 
 
-参考： https://access.redhat.com/articles/3148751	
+参考：
+
+- https://access.redhat.com/articles/3148751	
+
+- https://sleeplessbeastie.eu/2015/05/11/how-to-enforce-read-only-mode-on-every-connected-usb-storage-device/
 
 
